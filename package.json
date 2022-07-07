@@ -1,0 +1,41 @@
+{
+  "name": "conduit-blog-frontend-test-sample",
+  "version": "1.0.0",
+  "description": "Sample acceptance web tests",
+  "main": "config/codecept.conf.js",
+  "scripts": {
+    "test:acceptance": "npx codeceptjs run --steps --config tests/acceptance/config/codecept.conf.js",
+    "test:acceptance:threads": "npx codeceptjs --config tests/acceptance/config/codecept.conf.js --profile threads run-workers",
+    "test:acceptance:definitions": "npx codeceptjs def --config tests/acceptance/config/codecept.conf.js",
+    "test:acceptance:visual": "npx codeceptjs --config tests/acceptance/config/codecept.conf.js run --steps --grep @visual-regression"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatask/conduit-blog-frontend-test-sample.git"
+  },
+  "keywords": [
+    "acceptance-tests"
+  ],
+  "author": "Jonatas Kirsch",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jonatask/conduit-blog-frontend-test-sample/issues"
+  },
+  "homepage": "https://github.com/jonatask/conduit-blog-frontend-test-sample#readme",
+  "devDependencies": {
+    "@codeceptjs/mock-request": "0.3.1",
+    "@faker-js/faker": "7.3.0",
+    "chrome-har": "0.13.0",
+    "codeceptjs": "3.3.3",
+    "codeceptjs-resemblehelper": "^1.9.6",
+    "eslint": "8.18.0",
+    "moment": "^2.29.3",
+    "puppeteer": "^15.0.0"
+  },
+  "dependencies": {
+    "dotenv": "16.0.1"
+  },
+  "overrides": {
+    "@faker-js/faker": "7.3.0"
+  }
+}
